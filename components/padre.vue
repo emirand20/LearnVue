@@ -9,11 +9,24 @@
         v-on:keypress.enter="addItem"
         placeholder="Agrega elementos a la lista"
       />
-      <button @click="addItem">Agrega a la lista</button> 
+      <button @click="addItem">Agrega a la lista</button>
       <button @click="muestraElementosPapelera">
         Ver elementos de la papelera
       </button>
-      <pre>{{ nueva }}</pre>
+      <ul>
+        <li
+          v-for="(item, index) in items"
+          :key="index.item"
+          v-bind:style="{ display: !item.deleted ? '' : 'none' }"
+        >
+          <input type="checkbox" v-model="item.checked" />
+          <span :class="item.checked ? 'strikeout' : null">{{
+            item.text
+          }}</span>
+          <button @click="hideItem(item)">x</button>
+        </li>
+      </ul>
+      <pre>{{ items }}</pre>
     </div>
 
     <!-- <Hijo :tarea="nueva" @foo="handleFoo"></Hijo> -->
@@ -47,9 +60,9 @@ export default {
     };
   },
   methods: {
-    handleFoo(data) {
-      this.nueva = data;
-    },
+    // handleFoo(data) {
+    //   this.nueva = data;
+    // },
     addItem() {
       if (!this.nueva) {
         alert("añade tarea");
@@ -60,6 +73,17 @@ export default {
           deleted: false,
         });
       }
+      this.nueva = ''
+    },
+    hideItem(item) {
+      item.deleted = true;
+    },
+    muestraElementosPapelera() {
+      this.items.forEach((element) => {
+        if (element.deleted == true) {
+          element.deleted = false;
+        }
+      });
     },
   },
 };
@@ -78,5 +102,8 @@ header {
   padding: 10px;
   color: white;
   font-size: 1.5em;
+}
+ul span.strikeout {
+    text-decoration: line-through;
 }
 </style>
