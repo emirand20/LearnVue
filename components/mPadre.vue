@@ -1,14 +1,26 @@
 <template>
-    <mBoton @click="consoleBoton" text="añadir" color="red"/>
-    <mBoton @click="consoleBoton" text="editar" color="yellow"/>
-    <mBoton @click="consoleBoton" text="eliminar" color="green"/>
+  <mBoton
+    @showConsole="showConsole"
+    text="añadir"
+    color="red"
+  />
+  <mBoton
+    @showConsole="showConsole"
+    text="editar"
+    color="yellow"
+  />
+  <mBoton
+    @showConsole="showConsole"
+    text="eliminar"
+    color="green"
+  />
 </template>
 <script>
 export default {
-    methods:{
-        consoleBoton(){
-            // console.log(this.$emit(this.text))
-        }
+  methods: {
+    showConsole(val) {
+      console.log(val); 
     }
-}
+  },
+};
 </script>
