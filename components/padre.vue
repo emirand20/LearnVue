@@ -14,28 +14,28 @@
         Ver elementos de la papelera
       </button>
     </div>
-    <Hijo ref="childComponent"></Hijo>
+    <Hijo ref="hijo"></Hijo>
   </div>
 </template>
   
 <script>
-// import hijo from './hijo.vue'
 
 export default {
   data() {
     return {
       title: "To Do",
       message: "Crea una lista de tareas",
+      nueva: ''
     };
   },
-  // components: {
-  //   hijo
-  // },
-  // methods: {
-  //   addItemx () {
-  //     this.$refs.hijo.addItem()
-  //   }
-  // }
+  methods: {
+    addItem() {
+      this.$refs.hijo.addItem(this.nueva);
+    },
+    muestraElementosPapelera() {
+      this.$refs.hijo.muestraElementosPapelera();
+    },
+  },
 };
 </script>
 

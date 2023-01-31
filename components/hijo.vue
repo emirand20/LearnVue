@@ -11,12 +11,10 @@
     </li>
   </ul>
   <pre>{{ items }}</pre>
-  <!-- <h1>{{ saludo }}</h1> -->
-  <!-- <button @click="accion">Acción</button> -->
 </template>
+
 <script>
 export default {
-  // props: ["tarea", "nueva"],
   data() {
     return {
       items: [
@@ -43,25 +41,20 @@ export default {
       return this.tarea;
     },
   },
-  mounted:{
-  },
   methods: {
     // accion() {
-      addItem() {
-        if (!this.nueva) {
-          alert("añade tarea");
-        } else {
-          this.items.push({
-            text: this.nueva,
-            checked: false,
-            deleted: false,
-          });
-        }
-        this.nueva = "";
-      },
-    //   this.$emit("foo", "Pedro");
-    // },
-
+    addItem(nueva) {
+      if (!nueva) {
+        alert("añade tarea");
+      } else {
+        this.items.push({
+          text: nueva,
+          checked: false,
+          deleted: false,
+        });
+      }
+      nueva = "";
+    },
 
     hideItem(item) {
       item.deleted = true;
