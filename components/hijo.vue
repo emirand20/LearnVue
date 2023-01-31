@@ -10,7 +10,7 @@
       <button @click="hideItem(item)">x</button>
     </li>
   </ul>
-  <pre>{{ items }}</pre>
+
 </template>
 
 <script>
