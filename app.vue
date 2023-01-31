@@ -1,5 +1,11 @@
+
+import MPadre from './components/mPadre.vue';
+
+
+import MPadre from './components/mPadre.vue';
+
 <template>
   <div>
-    <Padre></Padre>
+    <mPadre />
   </div>
 </template>
