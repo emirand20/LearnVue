@@ -1,8 +1,5 @@
 <template>
-  <button
-    :style="{ backgroundColor: color }"
-    @click="$emit('showConsole', text)"
-  >
+  <button :style="{ backgroundColor: color }">
     {{ text }}
   </button>
 </template>
