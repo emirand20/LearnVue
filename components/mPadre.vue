@@ -1,8 +1,9 @@
 <template>
+  <h1>Botons</h1>
   <mBoton @click="add" text="añadir" color="red" />
   <mBoton @click="edit" text="editar" color="yellow" />
   <mBoton @click="destroy" text="eliminar" color="green" />
-
+  <h1>Select</h1>
   <mSelect @cambio="cambio" :options="options" />
 </template>
 <script>
@@ -11,8 +12,12 @@ export default {
     return {
       selected: null,
       options: [
-        { id: 1, text: "aOpcion 1" },
-        { id: 2, text: "bOpcion 2" },
+        { id: 1, text: "Opcion 1" },
+        { id: 2, text: "Opcion 2" },
+        { id: 3, text: "Opcion 3" },
+        { id: 4, text: "Opcion 4" },
+        { id: 5, text: "Opcion 5" },
+
       ],
     };
   },
