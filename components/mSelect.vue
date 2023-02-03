@@ -1,8 +1,7 @@
 <template>
-  <!--@click="$emit('showConsole', text)" -->
   <span>Selected: {{ selected }}</span>
   <br>
-  <select v-model="selected">
+  <select v-model="selected" @input="$emit('cambio', $event.target.value)">
     <option v-for="index in options" :key="index.option">
       {{ index.text }}
     </option>

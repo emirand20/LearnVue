@@ -5,6 +5,7 @@
   <mBoton @click="destroy" text="eliminar" color="green" />
   <h1>Select</h1>
   <mSelect @cambio="cambio" :options="options" />
+  <pre>{{ selected }}</pre>
 </template>
 <script>
 export default {
@@ -26,7 +27,7 @@ export default {
       console.log("añadir");
     },
     edit() {
-      console.log("borrar");
+      console.log("editar");
     },
     destroy() {
       console.log("eliminar");
