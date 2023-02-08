@@ -9,6 +9,3 @@ export default {
   props: ["text", "color"],
 };
 </script>
-
-<style>
-</style>

@@ -1,6 +1,10 @@
 <template>
   <div>
-    <mPadre />
+    <showHide />
+    <br/>
+    <Age />
+    <br/>
+    <TresBotones />
   </div>
 </template>
 <style scoped>
