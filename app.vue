@@ -5,6 +5,8 @@
     <Age />
     <br/>
     <TresBotones />
+    <br/>
+    <ChangeColor />
   </div>
 </template>
 <style scoped>
