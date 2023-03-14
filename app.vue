@@ -1,16 +1,5 @@
 <template>
-  <div>
-    <showHide />
-    <br/>
-    <Age />
-    <br/>
-    <TresBotones />
-    <br/>
-    <ChangeColor />
-  </div>
+  <NavBar />
 </template>
-<style scoped>
-div{
-  text-align: center;
-}
-</style>
+<script>
+</script>
